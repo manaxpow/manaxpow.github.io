@@ -1,0 +1,107 @@
+:root {
+    --bg: #0b0f19;
+    --card-bg: #161b2a;
+    --primary: #64ffda;
+    --text-main: #ccd6f6;
+    --text-sub: #8892b0;
+    --white: #ffffff;
+}
+
+/* Base Styles */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    background-color: var(--bg);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+.container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+/* Navigation */
+header { padding: 30px 0; position: sticky; top: 0; background: rgba(11, 15, 25, 0.85); backdrop-filter: blur(10px); z-index: 100; }
+nav { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 22px; font-weight: 800; color: var(--white); letter-spacing: 1px; }
+.logo span { color: var(--primary); }
+.nav-links { display: flex; list-style: none; align-items: center; }
+.nav-links li { margin-left: 25px; }
+.nav-links a { text-decoration: none; color: var(--text-main); font-size: 13px; transition: 0.3s; font-weight: 500; }
+.nav-links a:hover { color: var(--primary); }
+.btn-contact { border: 1px solid var(--primary); padding: 8px 18px; border-radius: 4px; color: var(--primary) !important; }
+.btn-contact:hover { background: rgba(100, 255, 218, 0.1); }
+
+/* Hero - Đã cập nhật cho ảnh */
+.hero { min-height: 90vh; display: flex; align-items: center; }
+
+/* Bố cục flex để ảnh và chữ ngang hàng */
+.hero-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.hero-content { flex: 2; }
+.hero-avatar { flex: 1; display: flex; justify-content: center; }
+
+/* Styling cho ảnh cá nhân */
+.avatar-wrapper {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid var(--primary); /* Viền xanh chuẩn công nghệ */
+    padding: 10px;
+    background: rgba(100, 255, 218, 0.05);
+    box-shadow: 0 0 30px rgba(100, 255, 218, 0.2);
+    transition: 0.5s ease;
+}
+
+.avatar-wrapper:hover {
+    transform: rotate(5deg) scale(1.05); /* Hiệu ứng xoay nhẹ khi di chuột */
+    box-shadow: 0 0 40px rgba(100, 255, 218, 0.4);
+}
+
+.avatar-wrapper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+}
+
+.greeting { color: var(--primary); font-family: monospace; margin-bottom: 10px; font-size: 16px; }
+.name { font-size: clamp(35px, 6vw, 60px); color: var(--white); font-weight: 800; line-height: 1.1; }
+.typewriter { font-size: clamp(18px, 3vw, 30px); color: var(--text-sub); margin-top: 10px; }
+#typewriter-text { color: var(--white); border-bottom: 2px solid var(--primary); }
+.description { max-width: 550px; margin-top: 25px; color: var(--text-sub); font-size: 16px; }
+.social-icons { margin-top: 35px; }
+.social-icons a { color: var(--text-sub); font-size: 24px; margin-right: 25px; transition: 0.3s; display: inline-block; }
+.social-icons a:hover { color: var(--primary); transform: translateY(-5px); }
+
+/* Responsive cho điện thoại (Ảnh sẽ lên trên chữ) */
+@media (max-width: 768px) {
+    .hero-flex { flex-direction: column-reverse; text-align: center; gap: 30px; }
+    .hero-content { flex: unset; display: flex; flex-direction: column; align-items: center; }
+    .description { max-width: 100%; }
+    .avatar-wrapper { width: 180px; height: 180px; }
+}
+
+/* Skills */
+.section-title { font-size: 28px; margin: 100px 0 40px; color: var(--white); display: flex; align-items: center; }
+.section-title::after { content: ""; height: 1px; width: 150px; background: var(--primary); margin-left: 20px; opacity: 0.3; }
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+.skill-group { background: var(--card-bg); padding: 30px; border-radius: 12px; transition: 0.4s; border: 1px solid transparent; }
+.skill-group:hover { transform: translateY(-10px); border-color: rgba(100, 255, 218, 0.3); box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7); }
+.tech-icons { display: flex; gap: 15px; font-size: 28px; margin-bottom: 20px; }
+.skill-group h4 { margin-bottom: 15px; font-size: 18px; display: flex; align-items: center; gap: 10px; }
+.skill-group ul { list-style: none; font-size: 14px; color: var(--text-sub); }
+.highlight-group { border: 1px solid var(--primary); }
+
+/* Projects */
+.project-card { background: var(--card-bg); padding: 40px; border-radius: 12px; position: relative; overflow: hidden; }
+.project-card::before { content: ""; position: absolute; top: 0; left: 0; width: 5px; height: 100%; background: var(--primary); }
+.tag { color: var(--primary); font-family: monospace; font-size: 13px; }
+.tech-tags { margin-top: 20px; }
+.tech-tags span { font-size: 12px; background: #1d2d44; padding: 5px 12px; border-radius: 4px; margin-right: 8px; color: var(--primary); }
+
+footer { text-align: center; padding: 60px 0; border-top: 1px solid rgba(136, 146, 176, 0.1); color: var(--text-sub); font-size: 14px; }

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Thành Nam | Software Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo">NAM<span>.</span>DEV</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="mailto:nguyenthanhnam255bmt@gmail.com" class="btn-contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero" id="about" data-aos="fade-up">
+            <div class="hero-flex">
+                <div class="hero-content">
+                    <p class="greeting">XIN CHÀO, TÔI LÀ</p>
+                    <h1 class="name">Nguyễn Thành Nam</h1>
+                    <h2 class="typewriter">I build <span id="typewriter-text"></span></h2>
+                    <p class="description">
+                        Fullstack Developer đam mê xây dựng hệ thống bền vững. 
+                        Tư duy thiết kế dựa trên <strong>Clean Architecture</strong> và các nguyên lý <strong>SOLID</strong>. 
+                        Sẵn sàng giải quyết các bài toán backend phức tạp với .NET và NestJS.
+                    </p>
+                    <div class="social-icons">
+                        <a href="https://github.com/manaxpow" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:nguyenthanhnam255bmt@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="hero-avatar" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="avatar-wrapper">
+                        <img src="avatar.webp" alt="Nguyễn Thành Nam" />
+                    </div>
+                </div>
+                </div>
+        </section>
+
+        <section class="skills" id="skills">
+            <h3 class="section-title" data-aos="fade-right">Technical Stack</h3>
+            <div class="skills-grid">
+                <div class="skill-group" data-aos="zoom-in" data-aos-delay="100">
+                    <h4><i class="fas fa-code"></i> Languages</h4>
+                    <div class="tech-icons">
+                        <i class="devicon-csharp-plain colored"></i>
+                        <i class="devicon-typescript-plain colored"></i>
+                        <i class="devicon-javascript-plain colored"></i>
+                    </div>
+                    <ul><li>C#, TypeScript, JavaScript</li></ul>
+                </div>
+
+                <div class="skill-group" data-aos="zoom-in" data-aos-delay="200">
+                    <h4><i class="fas fa-cubes"></i> Frameworks</h4>
+                    <div class="tech-icons">
+                        <i class="devicon-dotnetcore-plain colored"></i>
+                        <i class="devicon-nestjs-original colored"></i>
+                        <i class="devicon-react-original colored"></i>
+                    </div>
+                    <ul><li>ASP.NET Core, NestJS, React</li></ul>
+                </div>
+
+                <div class="skill-group" data-aos="zoom-in" data-aos-delay="300">
+                    <h4><i class="fas fa-server"></i> Databases</h4>
+                    <div class="tech-icons">
+                        <i class="devicon-postgresql-plain colored"></i>
+                        <i class="devicon-mysql-plain colored"></i>
+                        <i class="devicon-redis-plain colored"></i>
+                    </div>
+                    <ul><li>PostgreSQL, MySQL, Redis</li></ul>
+                </div>
+
+                <div class="skill-group highlight-group" data-aos="zoom-in" data-aos-delay="400">
+                    <h4><i class="fas fa-brain"></i> Architecture</h4>
+                    <div class="tech-icons">
+                        <i class="fas fa-shield-halved" style="color: #64ffda;"></i>
+                        <i class="fas fa-microchip" style="color: #64ffda;"></i>
+                    </div>
+                    <ul><li>Clean Architecture, SOLID, ACID, OOP</li></ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+            <h3 class="section-title" data-aos="fade-right">Featured Projects</h3>
+            <div class="project-card" data-aos="fade-up">
+                <div class="project-info">
+                    <span class="tag">Highlight Project</span>
+                    <h4>Enterprise Management System</h4>
+                    <p>Hệ thống Backend chuẩn doanh nghiệp áp dụng Clean Architecture, CQRS, và tối ưu hóa hiệu năng với Redis Caching.</p>
+                    <div class="tech-tags">
+                        <span>.NET 8</span> <span>PostgreSQL</span> <span>Redis</span> <span>Docker</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built by <strong>Nguyễn Thành Nam</strong> &copy; 2026</p>
+        <p style="font-size: 10px; margin-top: 5px;">GitHub: manaxpow</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
