@@ -1,0 +1,1 @@
+# manaxpow.githun.io
