@@ -1,1 +1,1 @@
-# manaxpow.githun.io
+# manaxpow.github.io
